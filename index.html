@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <title>Graph Traversal | Intro & Types</title>
+    <meta name="author" content="Bishal Thapa" />
+
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet"/>    
+
+    <link href="gs.css" rel="stylesheet" />
+</head>
+
+<body>
+    
+    <div id="impress-toolbar"></div>
+    
+    <img class="bg" src="f.jpeg">
+    
+<div id="impress"
+    data-transition-duration="1000"
+    data-width="1024"
+    data-height="768"
+    data-max-scale="3"
+    data-min-scale="0"
+    data-perspective="1000">
+    <div id="head" class="step" data-x="0" data-y="-1500" data-scale="8"><b>Graph Traversal</b></div>
+    <div id="overview" class="step" data-x="3000" data-y="1500" data-z="0" data-scale="10"></div>
+    
+      <!--
+        
+        This is an example of step element being scaled.
+        
+        Again, we use a `data-` attribute, this time it's `data-scale="4"`, so it means that this
+        element will be 4 times larger than the others.
+        From presentation and transitions point of view it means, that it will have to be scaled
+        down (4 times) to make it back to its correct size.
+        
+    -->
+    
+    <div id="intro" class="step" data-x="500" data-y="-300" data-scale="5" data-rotate-x="0"  data-rotate-y="0" style="text-align: justify;">
+        <p class="h"><b>Introduction:-</b></p>
+        <p>The process of <b class="visiting">visiting</b> and <b class="exploring">exploring</b> a graph for processing is called <b>graph traversal</b>. Sequence of steps 
+            known as Graph Traversal Algorithm that can be used to traverse a graph.</p>
+    </div>
+
+    <div id="types" class="step" data-x="2700" data-y="1800" data-rotate="-45" data-scale="4">
+        <p class="h"><b>They are of two types:-</b></p>
+        <p>
+            1. Breadth First Traversal(BFT) <br>
+            2. Depth First Traversal(DFT)
+        </p>
+    </div>
+
+    <div id="bft" class="step" data-x="50" data-y="3000" data-rotate-x="0"  data-rotate-y="0" data-rotate="45" data-scale="5" style="text-align: justify;">
+        <p class="h"><b>Breadth First Traversal(BFT):-</b></p>
+        <p>It is a technique that selects a node and visits all nearby nodes in 1st level and goes to another. This algorithm uses a <b class="q">queue</b> 
+            <i><b class="q">(first in first out)</b></i> data structure. The queue size is determined by the total number of vertices in the graph.</p>
+    </div>
+
+    <div id="s1" class="step" data-x="5000" data-y="-300" data-rotate="0" data-scale="4">
+        <p class="h"><b>Working Process of BFT:-</b></p>
+        <p>
+       <img class="bft" src="breadth-first-traversal.jpeg">
+        </p>
+    </div>
+
+    <div id="dft" class="step" data-x="-2800" data-y="2200" data-rotate-x="0" data-rotate-y="0" data-scale="4" data-rotate="-90" style="text-align: justify;">
+        <p class="h"><b>Depth First Traversal(DFT):-</b></p>
+        <p>It is a technique that explores the graph in depth-first order, starting with source node and then repeatedly visits its surrounding vertices 
+            before backtracking. It will analyze(explore/visits) to the deepest vertices in a branch of the graph before moving on to other branches. It uses <b class="s">stack</b>
+            <i><b class="s">(last in first out)</b></i> data structure.</p>
+    </div>
+
+    <div id="s2" class="step" data-x="5000" data-y="2000" data-rotate="0" data-scale="4">
+        <p class="h"><b>Working Process of DFT:-</b></p>
+        <p>
+        <img src="dft.jpeg" class="dft"></p>
+    </div>
+
+    <div id="diff" class="step" data-x="8200" data-y="1000" data-scale="5" data-rotate="-90">
+        <p class="diff"><b>Differentiate between BFT and DFT:-</b></p>
+        <table border="1">
+            <tr>
+                <th class="a1">Breadth First Traversal</th>
+                <th class="a2">Depth First Traversal</th>
+            </tr>
+            <tr>
+                <td>It uses queue data structure.</td>
+                <td>It uses stack data structure.</td>
+            </tr>
+            <tr>
+                <td>It is slower and requires more memory.</td>
+                <td>It is faster and requires less memory.</td>
+            </tr>
+            <tr>
+                <td>It visits nodes level by level.</td>
+                <td>It visits nodes of graph depth wise.</td>
+            </tr>
+            <tr>
+                <td class="a3">Backtracking is not required.</td>
+                <td class="a4">Backtracking is required.</td>
+            </tr>
+        </table>
+        <p>Graph Traversal's real-life appliactions are social media (i.e. Facebook, Youtube, Twitter, etc.), networking, checking cycles in graph, etc. </p>
+    </div>
+    <!--
+        
+        And the last one shows full power and flexibility of impress.js.
+        
+        You can not only position element in 3D, but also rotate it around any axis.
+        So this one here will get rotated by -40 degrees (40 degrees anticlockwise) around X axis and
+        10 degrees (clockwise) around Y axis.
+        
+        You can of course rotate it around Z axis with `data-rotate-z` - it has exactly the same effect
+        as `data-rotate` (these two are basically aliases).
+        
+    -->
+    <div id="end" class="step" data-x="6200" data-y="4500" data-z="-100" data-rotate-x="-40" data-rotate-y="10" data-scale="2">
+        <p><span class="thank">Thank</span> <span class="you">you</span> <span class="for">for</span> <span class="watching">watching !</span><br>
+        <b class="bt">-Bishal Thapa</b>
+        </p>
+    </div>
+
+    <!--
+        
+        So to summarize of all the possible attributes used to position presentation steps, we have:
+        
+        * `data-x`, `data-y`, `data-z` - they define the position of **the center** of step element on
+            the canvas in pixels; their default value is 0;
+        * `data-rotate-x`, `data-rotate-y`, 'data-rotate-z`, `data-rotate` - they define the rotation of
+            the element around given axis in degrees; their default value is 0; `data-rotate` and `data-rotate-z`
+            are exactly the same;
+        * `data-scale` - defines the scale of step element; default value is 1
+        
+        These values are used by impress.js in CSS transformation functions, so for more information consult
+        CSS transfrom docs: https://developer.mozilla.org/en/CSS/transform
+        
+    -->
+    
+    </div>
+<!--
+    
+    Last, but not least.
+    
+    To make all described above really work, you need to include impress.js in the page.
+    I strongly encourage to minify it first.
+    
+    In here I just include full source of the script to make it more readable.
+    
+    You also need to call a `impress().init()` function to initialize impress.js presentation.
+    And you should do it in the end of your document. Not only because it's a good practice, but also
+    because it should be done when the whole document is ready.
+    Of course you can wrap it in any kind of "DOM ready" event, but I was too lazy to do so ;)
+    
+-->
+<script src="impress.js"></script>
+<script>impress().init();</script>
+
+<!--
+    
+    The `impress()` function also gives you access to the API that controls the presentation.
+    
+    Just store the result of the call:
+    
+        var api = impress();
+    
+    and you will get three functions you can call:
+    
+        `api.init()` - initializes the presentation,
+        `api.next()` - moves to next step of the presentation,
+        `api.prev()` - moves to previous step of the presentation,
+        `api.goto( stepIndex | stepElementId | stepElement, [duration] )` - moves the presentation to the step given by its index number
+                id or the DOM element; second parameter can be used to define duration of the transition in ms,
+                but it's optional - if not provided default transition duration for the presentation will be used.
+    
+    You can also simply call `impress()` again to get the API, so `impress().next()` is also allowed.
+    Don't worry, it wont initialize the presentation again.
+    
+    For some example uses of this API check the last part of the source of impress.js where the API
+    is used in event handlers.
+    
+-->
+
+</body>
+</html>

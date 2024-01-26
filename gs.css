@@ -1,0 +1,160 @@
+* {
+    margin: auto;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    
+}
+body {
+    font-family: 'PT Sans', sans-serif;
+    min-height: 740px;
+    background: rgb(215, 215, 215);
+    background: radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+}
+.bg {
+    height: 100%;
+    width: 100%;
+}
+.step {
+    position: relative;
+    width: 900px;
+    padding: 40px;
+    margin: 20px auto;
+
+    box-sizing: border-box;
+
+    font-family: 'Merriweather';
+    font-size: 48px;
+    line-height: 1.5;
+}
+.impress-enabled div#impress-toolbar {
+    position: fixed;
+    top: 1px;
+    left: 1px;
+    margin: 0;
+    opacity: 1;
+    
+}
+body.impress-mouse-timeout div#impress-toolbar {
+    display: none;
+}
+.impress-enabled div#impress-toolbar > span {
+    margin-right: 8px;
+}
+.impress-enabled .step.active { opacity: 1 }
+
+b {
+    font-weight: bold;
+}
+#intro {
+    padding: 20px 20px;
+    border-radius: 25px;
+}
+#intro .h, #types .h, #bft .h, #s1 .h, #dft .h, #s2 .h, #diff .diff {
+    font-size: 50px;
+}
+#intro b, #bft b, #dft b{
+    display: inline-block;
+    transition: 0.5s;
+}
+#intro p, #bft p, #a1 p, #dft p, #a2 p, #types p{
+    font-size: 35px;
+}
+#intro.present .visiting {
+    transform: translateY(-10px);
+}
+#intro.present .exploring {
+    transform: rotate(-10deg);
+    transition-delay: 0.25s;
+}
+#bft.present .q, #dft.present .s{
+    transform: translateY(-10px);
+}
+#s1 .bft {
+    height: 80%;
+    width: 80%;
+    border-radius: 25px;
+}
+#s2 .dft {
+    height: 60%;
+    width: 60%;
+    border-radius: 25px;
+}
+#diff table, #diff p {
+    font-size: 22px;
+    text-align: justify;
+    border-radius: 10px;
+}
+#diff th {
+    font-weight: bold;
+    padding: 6px;
+}
+#diff td {
+    padding: 6px;
+}
+#diff .a1 {
+    border-radius: 10px 0 0 0;
+}
+#diff .a2 {
+    border-radius: 0 10px 0 0;
+}
+#diff .a3 {
+    border-radius: 0 0 0 10px;
+}
+#diff .a4 {
+    border-radius: 0 0 10px 0;
+}
+#end p{
+    transform-style: preserve-3d;
+    font-size: 50px;
+}
+#end span {
+    display: inline-block;
+    transform: translateZ(40px);
+    transition: 0.5s;
+}
+
+#end .thank {
+    transform: translateZ(-40px);
+}
+
+#end .you {
+    transform: translateZ(20px);
+}
+
+#end .for {
+    transform: translateZ(-40px);
+}
+
+#end .watching {
+    transform: translateZ(60px);
+}
+
+#end.present span {
+    transform: translateZ(0px);
+}
+
+#end b {
+    display: inline-block;
+    transition: 0.5s;
+}
+#end.present .bt {
+    transform: scale(0.9);
+    transition-delay: 0.25s;
+}
+/*
+    The last step is an overview.
+    There is no content in it, so we make sure it's not visible because we want
+    to be able to click on other steps.
+
+*/
+#overview { display: none }
+
+/*
+    We also make other steps visible and give them a pointer cursor using the
+    `impress-on-` class.
+*/
+.impress-on-overview .step {
+    opacity: 1;
+    cursor: pointer;
+}
